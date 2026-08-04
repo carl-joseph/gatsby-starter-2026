@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-
+import StagingBadge from "./stagingBadge"
 import Header from "./header"
 import Footer from "./footer"
 
@@ -21,6 +21,7 @@ export default function Layout({ children }) {
       <Header siteTitle={site.siteMetadata?.title || `Title`} />
       <main>{children}</main>
       <Footer />
+      <StagingBadge />
     </>
   )
 }
